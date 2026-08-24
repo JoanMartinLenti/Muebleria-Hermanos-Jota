@@ -1,21 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title img="imagenes/logo.svg">Mueblería Hermanos Jota</title>
+    <title>Sillón Copacabana | Hermanos Jota</title>
+    <meta name="description" content="Sillón Copacabana - Madera noble de guatambú y tapizado en lino natural. Una pieza emblemática de Mueblería Hermanos Jota.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="imagenes/logo.svg" type="image/svg+xml">
+    
+    <!-- Tipografías de Google Fonts: Inter y Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Hoja de Estilos Principal -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="imagenes/logo.svg" type="image/x-icon">
 </head>
 <body>
-    <header>
+    <!-- Barra superior de anuncios -->
+    <div class="top-bar">
+        <span>Envíos sustentables a todo el país • Diseños de autor en maderas nobles</span>
+    </div>
 
+    <!-- Encabezado Principal (Header Flexbox) -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="brand-logo" aria-label="Inicio Hermanos Jota">
+                <img src="imagenes/logo.svg" alt="Logotipo Hermanos Jota" width="42" height="42">
+                <span class="brand-name">Hermanos Jota</span>
+            </a>
+
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="productos.html" class="nav-link">Catálogo</a></li>
+                    <li><a href="producto.html" class="nav-link active">Destacado</a></li>
+                    <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
 
+    <!-- Contenido Principal -->
+    <main class="section-padding">
+        <div class="container">
+            <!-- Migas de Pan (Breadcrumbs) -->
+            <nav class="breadcrumb-nav" aria-label="Migas de pan">
+                <a href="index.html">Inicio</a> &gt; 
+                <a href="productos.html">Catálogo</a> &gt; 
+                <a href="productos.html">Living</a> &gt; 
+                <span>Sillón Copacabana</span>
+            </nav>
+
+            <!-- Disposición del Detalle del Producto (Flexbox) -->
+            <section class="product-detail-layout">
+                <!-- Columna Galería de Imágenes -->
+                <div class="product-detail-gallery">
+                    <div class="main-product-image">
+                        <img src="imagenes/Sillón Copacabana.png" alt="Vista principal Sillón Copacabana">
+                    </div>
+                    <div class="thumbnail-row">
+                        <div class="thumbnail-item active">
+                            <img src="imagenes/Sillón Copacabana.png" alt="Miniatura 1">
+                        </div>
+                        <div class="thumbnail-item">
+                            <img src="imagenes/Butaca Mendoza.png" alt="Miniatura 2">
+                        </div>
+                        <div class="thumbnail-item">
+                            <img src="imagenes/Sofá Patagonia.png" alt="Miniatura 3">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Información y Compra -->
+                <div class="product-detail-info">
+                    <div>
+                        <span class="badge badge-salvia">Mueble Sustentable Certificado</span>
+                        <h1 style="margin-top: 0.75rem;">Sillón Copacabana</h1>
+                        <span class="product-category">Colección Living 2026</span>
+                    </div>
+
+                    <div class="detail-price">$ 420.000</div>
+
+                    <p>
+                        El Sillón Copacabana reinterpreta la calidez de la costa con líneas orgánicas y una ergonomía envolvente. Fabricado a mano en nuestro taller con madera maciza de guatambú seleccionada y tapizado en lino rústico de alta resistencia.
+                    </p>
+
+                    <!-- Selector de Acabado -->
+                    <div class="form-group">
+                        <label class="form-label" for="acabado">Madera / Acabado:</label>
+                        <select id="acabado" class="form-select">
+                            <option value="guatambu-natural">Guatambú Natural (Acabado Mate)</option>
+                            <option value="petiribi">Petiribí Envejecido</option>
+                            <option value="nogal-oscuro">Nogal Oscuro al Aceite</option>
+                        </select>
+                    </div>
+
+                    <!-- Selector de Tapizado -->
+                    <div class="form-group">
+                        <label class="form-label" for="tapizado">Color de Tapizado:</label>
+                        <select id="tapizado" class="form-select">
+                            <option value="alabastro">Lino Alabastro Cálido</option>
+                            <option value="salvia">Lino Verde Salvia</option>
+                            <option value="rosa">Lino Rosa Polvoriento</option>
+                        </select>
+                    </div>
+
+                    <!-- Selector de Cantidad y Botón de Acción -->
+                    <div style="display: flex; gap: 1rem; align-items: center; margin-top: 0.5rem;">
+                        <div class="form-group" style="width: 100px; margin-bottom: 0;">
+                            <label class="form-label" for="cantidad">Cant:</label>
+                            <input type="number" id="cantidad" class="form-input text-center" value="1" min="1" max="10">
+                        </div>
+                        <button type="button" class="btn btn-primary" style="flex: 1; height: 50px;">Añadir al Carrito</button>
+                    </div>
+
+                    <!-- Especificaciones Técnicas -->
+                    <div class="detail-spec-list">
+                        <div class="detail-spec-item">
+                            <span class="detail-spec-label">Dimensiones:</span>
+                            <span class="detail-spec-value">85 cm (ancho) x 82 cm (prof.) x 78 cm (alto)</span>
+                        </div>
+                        <div class="detail-spec-item">
+                            <span class="detail-spec-label">Material de Estructura:</span>
+                            <span class="detail-spec-value">Madera maciza de Guatambú FSC®</span>
+                        </div>
+                        <div class="detail-spec-item">
+                            <span class="detail-spec-label">Relleno:</span>
+                            <span class="detail-spec-value">Espuma de alta densidad (30 kg/m³) + vellón siliconado</span>
+                        </div>
+                        <div class="detail-spec-item">
+                            <span class="detail-spec-label">Tiempo de Fabricación:</span>
+                            <span class="detail-spec-value">15 a 20 días hábiles (hecho por encargo)</span>
+                        </div>
+                        <div class="detail-spec-item">
+                            <span class="detail-spec-label">Garantía:</span>
+                            <span class="detail-spec-value">5 años de garantía estructural</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de Productos Relacionados (Flexbox) -->
+            <section class="products-section" style="padding-top: 2rem;">
+                <div class="section-header text-center">
+                    <span class="subtitle">Completa tu Espacio</span>
+                    <h2>Piezas que Combinan</h2>
+                </div>
+
+                <div class="products-grid">
+                    <!-- Relacionado 1 -->
+                    <article class="product-card">
+                        <div class="product-image-box">
+                            <img src="imagenes/Mesa de Centro Araucaria.png" alt="Mesa de Centro Araucaria">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Living</span>
+                            <h3 class="product-title">Mesa Centro Araucaria</h3>
+                            <span class="product-price">$ 245.000</span>
+                            <div class="product-card-footer">
+                                <a href="producto.html" class="btn btn-secondary btn-sm btn-full">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Relacionado 2 -->
+                    <article class="product-card">
+                        <div class="product-image-box">
+                            <img src="imagenes/Butaca Mendoza.png" alt="Butaca Mendoza">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Living</span>
+                            <h3 class="product-title">Butaca Mendoza</h3>
+                            <span class="product-price">$ 340.000</span>
+                            <div class="product-card-footer">
+                                <a href="producto.html" class="btn btn-secondary btn-sm btn-full">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Relacionado 3 -->
+                    <article class="product-card">
+                        <div class="product-image-box">
+                            <img src="imagenes/Sofá Patagonia.png" alt="Sofá Patagonia">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Living</span>
+                            <h3 class="product-title">Sofá Patagonia</h3>
+                            <span class="product-price">$ 890.000</span>
+                            <div class="product-card-footer">
+                                <a href="producto.html" class="btn btn-secondary btn-sm btn-full">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
     </main>
-    <footer>
-        
+
+    <!-- Pie de Página (Footer Flexbox) -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3 class="footer-col-title">Hermanos Jota</h3>
+                <p>Mueblería de autor comprometida con el diseño responsable, la calidad noble y la tradición artesanal.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-col-title">Navegación</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Catálogo Completo</a></li>
+                    <li><a href="producto.html">Producto Destacado</a></li>
+                    <li><a href="contacto.html">Showroom & Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-col-title">Categorías</h4>
+                <ul class="footer-links">
+                    <li><a href="productos.html">Living & Sillones</a></li>
+                    <li><a href="productos.html">Comedor & Mesas</a></li>
+                    <li><a href="productos.html">Dormitorio</a></li>
+                    <li><a href="productos.html">Espacios de Trabajo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-col-title">Atención</h4>
+                <ul class="footer-links">
+                    <li><a href="contacto.html">Av. San Juan 2840, CABA</a></li>
+                    <li><a href="contacto.html">consultas@hermanosjota.com</a></li>
+                    <li><a href="contacto.html">+54 11 4567-8900</a></li>
+                    <li><a href="contacto.html">Lun a Sáb: 10:00 a 19:00</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Mueblería Hermanos Jota. Todos los derechos reservados.</p>
+            <p>Diseño y Ebanistería Responsable.</p>
+        </div>
     </footer>
 </body>
 </html>

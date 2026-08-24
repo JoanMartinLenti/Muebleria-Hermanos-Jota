@@ -1,21 +1,222 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title img="imagenes/logo.svg">Mueblería Hermanos Jota</title>
+    <title>Mueblería Hermanos Jota | Mobiliario de Autor & Diseño Atemporal</title>
+    <meta name="description" content="Mueblería Hermanos Jota - Diseño contemporáneo, artesanía de precisión y maderas nobles sustentables.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="imagenes/logo.svg" type="image/svg+xml">
+    
+    <!-- Tipografías de Google Fonts: Inter y Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Hoja de Estilos Principal -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="imagenes/logo.svg" type="image/x-icon">
 </head>
 <body>
-    <header>
+    <!-- Barra superior de anuncios -->
+    <div class="top-bar">
+        <span>Envíos sustentables a todo el país • Diseños de autor en maderas nobles</span>
+    </div>
 
+    <!-- Encabezado Principal (Header Flexbox) -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="brand-logo" aria-label="Inicio Hermanos Jota">
+                <img src="imagenes/logo.svg" alt="Logotipo Hermanos Jota" width="42" height="42">
+                <span class="brand-name">Hermanos Jota</span>
+            </a>
+
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                    <li><a href="productos.html" class="nav-link">Catálogo</a></li>
+                    <li><a href="producto.html" class="nav-link">Destacado</a></li>
+                    <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
 
+    <!-- Contenido Principal -->
+    <main>
+        <!-- Sección Hero (Hero Flexbox) -->
+        <section class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="hero-tag">Colección Contemporánea 2026</span>
+                    <h1 class="hero-title">Mobiliario de Autor con Alma y Tradición</h1>
+                    <p class="hero-description">
+                        Creamos piezas únicas que equilibran diseño contemporáneo, calidez artesanal y un compromiso inquebrantable con la sustentabilidad forestal.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="productos.html" class="btn btn-primary">Explorar Catálogo</a>
+                        <a href="contacto.html" class="btn btn-secondary">Visitar Showroom</a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="imagenes/Sillón Copacabana.png" alt="Sillón Copacabana en madera de nogal y tapizado artesanal">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Valores y Compromiso (Flexbox) -->
+        <section class="values-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="subtitle">Nuestros Pilares</span>
+                    <h2>Diseño con Propósito</h2>
+                </div>
+
+                <div class="values-grid">
+                    <article class="value-card">
+                        <div class="value-icon salvia">🌿</div>
+                        <h3 class="value-title">Sustentabilidad</h3>
+                        <p class="value-text">Maderas certificadas de fuentes responsables y procesos de bajo impacto ambiental.</p>
+                    </article>
+
+                    <article class="value-card">
+                        <div class="value-icon siena">🔨</div>
+                        <h3 class="value-title">Artesanía de Precisión</h3>
+                        <p class="value-text">Ensambles tradicionales combinados con técnicas de terminación a mano.</p>
+                    </article>
+
+                    <article class="value-card">
+                        <div class="value-icon gold">✨</div>
+                        <h3 class="value-title">Atemporalidad</h3>
+                        <p class="value-text">Líneas depuradas concebidas para trascender modas y durar generaciones.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Productos Destacados (Flexbox) -->
+        <section class="products-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="subtitle">Selección Especial</span>
+                    <h2>Piezas Destacadas</h2>
+                </div>
+
+                <div class="products-grid">
+                    <!-- Producto 1 -->
+                    <article class="product-card">
+                        <div class="product-image-box">
+                            <span class="badge badge-salvia product-badge-pos">Sustentable</span>
+                            <img src="imagenes/Sillón Copacabana.png" alt="Sillón Copacabana">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Living</span>
+                            <h3 class="product-title">Sillón Copacabana</h3>
+                            <p>Estructura sólida en guatambú y tapizado de lino rústico.</p>
+                            <span class="product-price">$ 420.000</span>
+                            <div class="product-card-footer">
+                                <a href="producto.html" class="btn btn-secondary btn-sm btn-full">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 2 -->
+                    <article class="product-card">
+                        <div class="product-image-box">
+                            <span class="badge badge-gold product-badge-pos">Edición Limitada</span>
+                            <img src="imagenes/Aparador Uspallata.png" alt="Aparador Uspallata">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Almacenamiento</span>
+                            <h3 class="product-title">Aparador Uspallata</h3>
+                            <p>Diseño geométrico en nogal con detalles metálicos en vara de oro.</p>
+                            <span class="product-price">$ 680.000</span>
+                            <div class="product-card-footer">
+                                <a href="producto.html" class="btn btn-secondary btn-sm btn-full">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 3 -->
+                    <article class="product-card">
+                        <div class="product-image-box">
+                            <span class="badge badge-siena product-badge-pos">Popular</span>
+                            <img src="imagenes/Mesa Comedor Pampa.png" alt="Mesa Comedor Pampa">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Comedor</span>
+                            <h3 class="product-title">Mesa Comedor Pampa</h3>
+                            <p>Tapa maciza biselada de roble con patas torneadas a mano.</p>
+                            <span class="product-price">$ 590.000</span>
+                            <div class="product-card-footer">
+                                <a href="producto.html" class="btn btn-secondary btn-sm btn-full">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="text-center" style="margin-top: 2.5rem;">
+                    <a href="productos.html" class="btn btn-primary">Ver Todos los Productos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banner Editorial de Marca (Flexbox) -->
+        <section class="container">
+            <div class="editorial-banner">
+                <span class="badge badge-gold">Manifiesto Hermanos Jota</span>
+                <h2>Muebles Hechos para Vivir y Trascender</h2>
+                <p>
+                    Cada pieza es fabricada en nuestro taller con maderas nobles seleccionadas individualmente, honrando el oficio de la ebanistería tradicional.
+                </p>
+                <a href="contacto.html" class="btn btn-gold">Agenda tu Asesoramiento</a>
+            </div>
+        </section>
     </main>
-    <footer>
-        
+
+    <!-- Pie de Página (Footer Flexbox) -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3 class="footer-col-title">Hermanos Jota</h3>
+                <p>Mueblería de autor comprometida con el diseño responsable, la calidad noble y la tradición artesanal.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-col-title">Navegación</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Catálogo Completo</a></li>
+                    <li><a href="producto.html">Producto Destacado</a></li>
+                    <li><a href="contacto.html">Showroom & Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-col-title">Categorías</h4>
+                <ul class="footer-links">
+                    <li><a href="productos.html">Living & Sillones</a></li>
+                    <li><a href="productos.html">Comedor & Mesas</a></li>
+                    <li><a href="productos.html">Dormitorio</a></li>
+                    <li><a href="productos.html">Espacios de Trabajo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-col-title">Atención</h4>
+                <ul class="footer-links">
+                    <li><a href="contacto.html">Av. San Juan 2840, CABA</a></li>
+                    <li><a href="contacto.html">consultas@hermanosjota.com</a></li>
+                    <li><a href="contacto.html">+54 11 4567-8900</a></li>
+                    <li><a href="contacto.html">Lun a Sáb: 10:00 a 19:00</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Mueblería Hermanos Jota. Todos los derechos reservados.</p>
+            <p>Diseño y Ebanistería Responsable.</p>
+        </div>
     </footer>
 </body>
 </html>

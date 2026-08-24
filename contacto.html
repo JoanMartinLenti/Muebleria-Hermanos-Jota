@@ -1,21 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title img="imagenes/logo.svg">Mueblería Hermanos Jota</title>
+    <title>Contacto & Showroom | Hermanos Jota</title>
+    <meta name="description" content="Visita nuestro showroom en San Telmo o contáctanos para proyectos de mobiliario a medida y asesoramiento personalizado.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="imagenes/logo.svg" type="image/svg+xml">
+    
+    <!-- Tipografías de Google Fonts: Inter y Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Hoja de Estilos Principal -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="imagenes/logo.svg" type="image/x-icon">
 </head>
 <body>
-    <header>
+    <!-- Barra superior de anuncios -->
+    <div class="top-bar">
+        <span>Envíos sustentables a todo el país • Diseños de autor en maderas nobles</span>
+    </div>
 
+    <!-- Encabezado Principal (Header Flexbox) -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="brand-logo" aria-label="Inicio Hermanos Jota">
+                <img src="imagenes/logo.svg" alt="Logotipo Hermanos Jota" width="42" height="42">
+                <span class="brand-name">Hermanos Jota</span>
+            </a>
+
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="productos.html" class="nav-link">Catálogo</a></li>
+                    <li><a href="producto.html" class="nav-link">Destacado</a></li>
+                    <li><a href="contacto.html" class="nav-link active">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
 
+    <!-- Contenido Principal -->
+    <main class="section-padding">
+        <div class="container">
+            <!-- Encabezado de la Página -->
+            <header class="section-header text-center">
+                <span class="subtitle">Estamos a tu disposición</span>
+                <h1>Visítanos o Escríbenos</h1>
+                <p>Te invitamos a conocer nuestros materiales nobles, probar las piezas en persona o solicitar un diseño a medida.</p>
+            </header>
+
+            <!-- Disposición de Contacto (Flexbox) -->
+            <section class="contact-layout">
+                <!-- Formulario de Contacto -->
+                <div class="contact-card">
+                    <h2 style="font-size: 1.35rem; margin-bottom: 1.25rem;">Envíanos un Mensaje</h2>
+                    
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label class="form-label" for="nombre">Nombre Completo *</label>
+                            <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Ej. Clara Méndez" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="email">Correo Electrónico *</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="nombre@correo.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="telefono">Teléfono / WhatsApp</label>
+                            <input type="tel" id="telefono" name="telefono" class="form-input" placeholder="+54 11 0000-0000">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="motivo">Tipo de Consulta *</label>
+                            <select id="motivo" name="motivo" class="form-select" required>
+                                <option value="" disabled selected>Selecciona una opción</option>
+                                <option value="producto">Consulta sobre un modelo específico</option>
+                                <option value="a-medida">Proyecto a medida / Interiorismo</option>
+                                <option value="visita">Agendar visita al Showroom</option>
+                                <option value="envios">Envíos y plazos de entrega</option>
+                                <option value="otro">Otras consultas</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="mensaje">Tu Mensaje *</label>
+                            <textarea id="mensaje" name="mensaje" class="form-textarea" rows="5" placeholder="Cuéntanos en detalle sobre tu espacio, medidas o consultas..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full" style="margin-top: 0.5rem;">Enviar Mensaje</button>
+                    </form>
+                </div>
+
+                <!-- Información del Showroom y Taller -->
+                <div class="contact-card" style="background-color: var(--color-fondo-suave);">
+                    <h2 style="font-size: 1.35rem; margin-bottom: 1.25rem;">Información del Showroom</h2>
+                    
+                    <div class="contact-info-list">
+                        <div class="contact-info-item">
+                            <div class="contact-icon-box">📍</div>
+                            <div>
+                                <h3 style="font-size: 1rem; margin-bottom: 0.25rem;">Showroom Principal</h3>
+                                <p>Av. San Juan 2840, Barrio San Telmo, CABA, Argentina.</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon-box">🕒</div>
+                            <div>
+                                <h3 style="font-size: 1rem; margin-bottom: 0.25rem;">Horarios de Atención</h3>
+                                <p>Lunes a Viernes: 10:00 a 19:00 hs.<br>Sábados: 10:00 a 14:00 hs.</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon-box">✉️</div>
+                            <div>
+                                <h3 style="font-size: 1rem; margin-bottom: 0.25rem;">Correo Electrónico</h3>
+                                <p>consultas@hermanosjota.com<br>proyectos@hermanosjota.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon-box">📞</div>
+                            <div>
+                                <h3 style="font-size: 1rem; margin-bottom: 0.25rem;">Teléfono & WhatsApp</h3>
+                                <p>+54 11 4567-8900<br>+54 9 11 9876-5432</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-borde);">
+                        <span class="badge badge-salvia" style="margin-bottom: 0.75rem;">Visitas al Taller</span>
+                        <p style="font-size: 0.9rem;">
+                            ¿Quieres ver el proceso de fabricación en vivo? Coordina una visita guiada a nuestra carpintería y conoce a los ebanistas detrás de cada creación.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
-    <footer>
-        
+
+    <!-- Pie de Página (Footer Flexbox) -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3 class="footer-col-title">Hermanos Jota</h3>
+                <p>Mueblería de autor comprometida con el diseño responsable, la calidad noble y la tradición artesanal.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-col-title">Navegación</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Catálogo Completo</a></li>
+                    <li><a href="producto.html">Producto Destacado</a></li>
+                    <li><a href="contacto.html">Showroom & Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-col-title">Categorías</h4>
+                <ul class="footer-links">
+                    <li><a href="productos.html">Living & Sillones</a></li>
+                    <li><a href="productos.html">Comedor & Mesas</a></li>
+                    <li><a href="productos.html">Dormitorio</a></li>
+                    <li><a href="productos.html">Espacios de Trabajo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-col-title">Atención</h4>
+                <ul class="footer-links">
+                    <li><a href="contacto.html">Av. San Juan 2840, CABA</a></li>
+                    <li><a href="contacto.html">consultas@hermanosjota.com</a></li>
+                    <li><a href="contacto.html">+54 11 4567-8900</a></li>
+                    <li><a href="contacto.html">Lun a Sáb: 10:00 a 19:00</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Mueblería Hermanos Jota. Todos los derechos reservados.</p>
+            <p>Diseño y Ebanistería Responsable.</p>
+        </div>
     </footer>
 </body>
 </html>
