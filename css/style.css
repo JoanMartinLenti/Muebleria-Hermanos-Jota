@@ -278,6 +278,11 @@ p:last-child {
   border-radius: var(--radius-pill);
 }
 
+.badge-white {
+  background-color: rgba(135, 169, 107, 0.18);
+  color: #dbdbdb;
+}
+
 .badge-salvia {
   background-color: rgba(135, 169, 107, 0.18);
   color: #55723e;
@@ -837,6 +842,52 @@ p:last-child {
   justify-content: center;
   font-weight: var(--fw-bold);
   flex-shrink: 0;
+}
+
+.social-block {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-borde);
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 118px;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-borde);
+  background-color: var(--color-fondo-suave);
+  color: var(--color-siena-tostado);
+  font-size: 0.8rem;
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: var(--transition-smooth);
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.social-link.instagram {
+  background: linear-gradient(135deg, rgba(212, 164, 55, 0.12), rgba(196, 122, 109, 0.15));
+}
+
+.social-link.pinterest {
+  background: linear-gradient(135deg, rgba(196, 122, 109, 0.12), rgba(160, 82, 45, 0.08));
+}
+
+.social-link.facebook {
+  background: linear-gradient(135deg, rgba(135, 169, 107, 0.12), rgba(160, 82, 45, 0.08));
 }
 
 /* --------------------------------------------------------------------------
