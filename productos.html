@@ -1,21 +1,304 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title img="imagenes/logo.svg">Mueblería Hermanos Jota</title>
+    <title>Catálogo de Muebles | Hermanos Jota</title>
+    <meta name="description" content="Explora el catálogo completo de piezas de autor de Mueblería Hermanos Jota. Living, comedor, dormitorio y espacios de trabajo.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="imagenes/logo.svg" type="image/svg+xml">
+    
+    <!-- Tipografías de Google Fonts: Inter y Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Hoja de Estilos Principal -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="imagenes/logo.svg" type="image/x-icon">
 </head>
 <body>
-    <header>
+    <!-- Barra superior de anuncios -->
+    <div class="top-bar">
+        <span>Envíos sustentables a todo el país • Diseños de autor en maderas nobles</span>
+    </div>
 
+    <!-- Encabezado Principal (Header Flexbox) -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="brand-logo" aria-label="Inicio Hermanos Jota">
+                <img src="imagenes/logo.svg" alt="Logotipo Hermanos Jota" width="42" height="42">
+                <span class="brand-name">Hermanos Jota</span>
+            </a>
+
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="productos.html" class="nav-link active">Catálogo</a></li>
+                    <li><a href="producto.html" class="nav-link">Destacado</a></li>
+                    <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
 
+    <!-- Contenido Principal -->
+    <main class="section-padding">
+        <div class="container">
+            <!-- Encabezado de Página -->
+            <header class="section-header text-center">
+                <span class="subtitle">Colección Artesanal | Redescubrir el arte de vivir</span>
+                <h1>Catálogo de Mobiliario</h1>
+                <p>Cada pieza cuenta la historia de manos expertas y materiales nobles</p>
+            </header>
+
+            <!-- Filtros de Categorías (Flexbox) -->
+            <nav class="filter-wrapper" aria-label="Filtro de productos">
+                <div class="filter-categories">
+                    <button type="button" class="filter-chip active">Todos</button>
+                    <button type="button" class="filter-chip">Living & Sillones</button>
+                    <button type="button" class="filter-chip">Comedor & Mesas</button>
+                    <button type="button" class="filter-chip">Dormitorio</button>
+                    <button type="button" class="filter-chip">Estudio & Trabajo</button>
+                    <button type="button" class="filter-chip">Almacenamiento</button>
+                </div>
+            </nav>
+
+            <!-- Grilla Completa de Productos (Flexbox) -->
+            <section class="products-grid" aria-label="Lista de productos">
+                <!-- Producto: Sillón Copacabana -->
+                <article class="product-card">
+                    <div class="product-image-box">
+                        <span class="badge badge-salvia product-badge-pos">Sustentable</span>
+                        <img src="imagenes/Sillón Copacabana.png" alt="Sillón Copacabana">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Living</span>
+                        <h2 class="product-title">Sillón Copacabana</h2>
+                        <p>Sillón lounge en cuero cognac con base giratoria de acero Burnt Sienna.</p>
+                        <span class="product-price">$650.000</span>
+                        <div class="product-card-footer">
+                            <a href="producto.html" class="btn btn-secondary btn-sm btn-full">Ver Producto</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Producto: Sofá Patagonia -->
+                <article class="product-card">
+                    <div class="product-image-box">
+                        <span class="badge badge-siena product-badge-pos">Destacado</span>
+                        <img src="imagenes/Sofá Patagonia.png" alt="Sofá Patagonia">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Living</span>
+                        <h2 class="product-title">Sofá Patagonia</h2>
+                        <p>Sofá tres cuerpos tapizado en lino Warm Alabaster con pata cónicas de madera.</p>
+                        <span class="product-price">$1.550.000</span>
+                        <div class="product-card-footer">
+                            <a href="producto.html" class="btn btn-secondary btn-sm btn-full">Ver Producto</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Producto: Butaca Mendoza -->
+                <article class="product-card">
+                    <div class="product-image-box">
+                        <span class="badge badge-gold product-badge-pos">Artesanal</span>
+                        <img src="imagenes/Butaca Mendoza.png" alt="Butaca Mendoza">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Living</span>
+                        <h2 class="product-title">Butaca Mendoza</h2>
+                        <p>Butaca tapizada en bouclé Dusty Rose con base de madera guatambú.</p>
+                        <span class="product-price">$600.000</span>
+                        <div class="product-card-footer">
+                            <a href="producto.html" class="btn btn-secondary btn-sm btn-full">Ver Producto</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Producto: Mesa Comedor Pampa -->
+                <article class="product-card">
+                    <div class="product-image-box">
+                        <span class="badge badge-siena product-badge-pos">Clásico</span>
+                        <img src="imagenes/Mesa Comedor Pampa.png" alt="Mesa Comedor Pampa">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Comedor</span>
+                        <h2 class="product-title">Mesa Comedor Pampa</h2>
+                        <p>Mesa extensible en madera maciza de roble con tablero biselado y sistema de apertura suave.</p>
+                        <span class="product-price">$940.000</span>
+                        <div class="product-card-footer">
+                            <a href="producto.html" class="btn btn-secondary btn-sm btn-full">Ver Producto</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Producto: Sillas Córdoba -->
+                <article class="product-card">
+                    <div class="product-image-box">
+                        <span class="badge badge-salvia product-badge-pos">Set x2</span>
+                        <img src="imagenes/Sillas Córdoba.png" alt="Sillas Córdoba">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Comedor</span>
+                        <h2 class="product-title">Sillas Córdoba</h2>
+                        <p>Juego de 4 sillas de comedor apilables en contrachapado moldeado de nogal y estructura tubular pintada en Sage Green.</p>
+                        <span class="product-price">$1.300.000 </span>
+                        <div class="product-card-footer">
+                            <a href="producto.html" class="btn btn-secondary btn-sm btn-full">Ver Producto</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Producto: Mesa de Centro Araucaria -->
+                <article class="product-card">
+                    <div class="product-image-box">
+                        <span class="badge badge-rosa product-badge-pos">Novedad</span>
+                        <img src="imagenes/Mesa de Centro Araucaria.png" alt="Mesa de Centro Araucaria">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Living</span>
+                        <h2 class="product-title">Mesa Centro Araucaria</h2>
+                        <p>Mesae de centro con sobre circular de mármol Patagonia y base de tres patas de madera de nogal.</p>
+                        <span class="product-price">$560.000</span>
+                        <div class="product-card-footer">
+                            <a href="producto.html" class="btn btn-secondary btn-sm btn-full">Ver Producto</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Producto: Aparador Uspallata -->
+                <article class="product-card">
+                    <div class="product-image-box">
+                        <span class="badge badge-gold product-badge-pos">Exclusivo</span>
+                        <img src="imagenes/Aparador Uspallata.png" alt="Aparador Uspallata">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Almacenamiento</span>
+                        <h2 class="product-title">Aparador Uspallata</h2>
+                        <p>Aparador de seis puertas fabricado en nogal sostenible con tiradores metálicos en acabado latón.</p>
+                        <span class="product-price">$1.200.000</span>
+                        <div class="product-card-footer">
+                            <a href="producto.html" class="btn btn-secondary btn-sm btn-full">Ver Producto</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Producto: Biblioteca Recoleta -->
+                <article class="product-card">
+                    <div class="product-image-box">
+                        <span class="badge badge-siena product-badge-pos">Modular</span>
+                        <img src="imagenes/Biblioteca Recoleta.png" alt="Biblioteca Recoleta">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Almacenamiento</span>
+                        <h2 class="product-title">Biblioteca Recoleta</h2>
+                        <p>Sistema modular de estantes abierto que combina acero Sage Green y repisas en roble claro.</p>
+                        <span class="product-price">$1.100.000</span>
+                        <div class="product-card-footer">
+                            <a href="producto.html" class="btn btn-secondary btn-sm btn-full">Ver Producto</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Producto: Escritorio Costa -->
+                <article class="product-card">
+                    <div class="product-image-box">
+                        <span class="badge badge-salvia product-badge-pos">Estudio</span>
+                        <img src="imagenes/Escritorio Costa.png" alt="Escritorio Costa">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Estudio & Trabajo</span>
+                        <h2 class="product-title">Escritorio Costa</h2>
+                        <p>Escritotio compacto con cajón organizado y tapa pasacables integrada en bambú laminado.</p>
+                        <span class="product-price">$780.000</span>
+                        <div class="product-card-footer">
+                            <a href="producto.html" class="btn btn-secondary btn-sm btn-full">Ver Producto</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Producto: Silla de Trabajo Belgrano -->
+                <article class="product-card">
+                    <div class="product-image-box">
+                        <span class="badge badge-gold product-badge-pos">Ergonomía</span>
+                        <img src="imagenes/Silla de Trabajo Belgrano.png" alt="Silla de Trabajo Belgrano">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Estudio & Trabajo</span>
+                        <h2 class="product-title">Silla de Trabajo Belgrano</h2>
+                        <p>Silla ergonomica regulable en altura con respaldo de malla transpirable y asiento tapizado en tejido reciclado.</p>
+                        <span class="product-price">$450.000</span>
+                        <div class="product-card-footer">
+                            <a href="producto.html" class="btn btn-secondary btn-sm btn-full">Ver Producto</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Producto: Mesa de Noche Aconcagua -->
+                <article class="product-card">
+                    <div class="product-image-box">
+                        <span class="badge badge-rosa product-badge-pos">Dormitorio</span>
+                        <img src="imagenes/Mesa de Noche Aconcagua.png" alt="Mesa de Noche Aconcagua">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Dormitorio</span>
+                        <h2 class="product-title">Mesa de Noche Aconcagua</h2>
+                        <p>Mesa de noche con cajón oculto y repisa inferior en roble reciclado.</p>
+                        <span class="product-price">$430.000</span>
+                        <div class="product-card-footer">
+                            <a href="producto.html" class="btn btn-secondary btn-sm btn-full">Ver Producto</a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </div>
     </main>
-    <footer>
-        
+
+    <!-- Pie de Página (Footer Flexbox) -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3 class="footer-col-title">Hermanos Jota</h3>
+                <p>Mueblería de autor comprometida con el diseño responsable, la calidad noble y la tradición artesanal.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-col-title">Navegación</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Catálogo Completo</a></li>
+                    <li><a href="producto.html">Producto Destacado</a></li>
+                    <li><a href="contacto.html">Showroom & Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-col-title">Categorías</h4>
+                <ul class="footer-links">
+                    <li><a href="productos.html">Living & Sillones</a></li>
+                    <li><a href="productos.html">Comedor & Mesas</a></li>
+                    <li><a href="productos.html">Dormitorio</a></li>
+                    <li><a href="productos.html">Espacios de Trabajo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-col-title">Atención</h4>
+                <ul class="footer-links">
+                    <li><a href="contacto.html">Av. San Juan 2847, CABA</a></li>
+                    <li><a href="contacto.html">info@hermanosjota.com</a></li>
+                    <li><a href="contacto.html">+54 11 4567-8900</a></li>
+                    <li><a href="contacto.html">Lun a Vie: 10:00 a 19:00 | Sab: 10:00 a 14:00</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Mueblería Hermanos Jota. Todos los derechos reservados.</p>
+            <p>Diseño y Ebanistería Responsable.</p>
+        </div>
     </footer>
 </body>
 </html>
