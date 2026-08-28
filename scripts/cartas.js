@@ -1,10 +1,8 @@
-import { productos, categorias } from './productos.js';
+import { categorias } from './productos.js';
 
 const contenedorProductos = document.querySelector('.products-grid');
-const botonesFiltro = document.querySelectorAll('.filter-chip');
-const categoriasValidas = ['Todos', ...new Set(Object.values(categorias))];
 
-function crearTarjetaProducto(producto) {
+function crearCartaProducto(producto) {
     const tarjeta = document.createElement('article');
     tarjeta.className = 'product-card';
     tarjeta.innerHTML = `
@@ -22,35 +20,10 @@ function crearTarjetaProducto(producto) {
     return tarjeta;
 }
 
-function renderizarProductos(filtro = 'Todos') {
-    const productosFiltrados = filtro === 'Todos'
-        ? productos
-        : productos.filter((producto) => categorias[producto.nombre] === filtro);
-
+function mostrarCartas(productosFiltrados) {
     contenedorProductos.replaceChildren(
-        ...productosFiltrados.map((producto) => crearTarjetaProducto(producto))
+        ...productosFiltrados.map((producto) => crearCartaProducto(producto))
     );
 }
 
-function filtrarProductos(categoria) {
-    renderizarProductos(categoria);
-    const url = new URL(window.location.href);
-    if (categoria === 'Todos') {
-        url.searchParams.delete('categoria');
-    } else {
-        url.searchParams.set('categoria', categoria);
-    }
-    window.history.replaceState({}, '', url);
-
-    botonesFiltro.forEach((boton) => {
-        boton.classList.toggle('active', boton.dataset.categoria === categoria);
-    });
-}
-
-botonesFiltro.forEach((boton) => {
-    boton.addEventListener('click', () => filtrarProductos(boton.dataset.categoria));
-});
-
-const categoriaSolicitada = new URLSearchParams(window.location.search).get('categoria');
-const categoriaInicial = categoriasValidas.includes(categoriaSolicitada) ? categoriaSolicitada : 'Todos';
-filtrarProductos(categoriaInicial);
+export { mostrarCartas };

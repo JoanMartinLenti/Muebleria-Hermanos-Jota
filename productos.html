@@ -55,6 +55,10 @@
 
             <!-- Filtros de Categorías (Flexbox) -->
             <nav class="filter-wrapper" aria-label="Filtro de productos">
+                <div class="form-group">
+                    <label class="form-label" for="busqueda-productos">Buscar productos</label>
+                    <input type="search" id="busqueda-productos" class="form-input" placeholder="Busca por nombre, categoría o descripción" autocomplete="off">
+                </div>
                 <div class="filter-categories">
                     <button type="button" class="filter-chip active" data-categoria="Todos">Todos</button>
                     <button type="button" class="filter-chip" data-categoria="Living">Living & Sillones</button>
@@ -68,7 +72,7 @@
             <!-- Grilla Completa de Productos (Flexbox) -->
             <section class="products-grid" aria-label="Lista de productos">
                  <!-- Script encargado de la generación de tarjetas de productos -->
-                <script type="module" src="scripts/cartas.js"></script>
+                <script type="module" src="scripts/filtros.js"></script>
                 
             </section>
         </div>
@@ -119,5 +123,6 @@
         </div>
     </footer>
     <script type="module" src="scripts/carrito.js"></script>
+    <script type="module" src="scripts/cartas.js"></script>
 </body>
 </html>
