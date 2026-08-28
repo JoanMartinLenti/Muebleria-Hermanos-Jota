@@ -7,7 +7,11 @@ const botonesFiltro = document.querySelectorAll('.filter-chip');
 const campoBusqueda = document.getElementById('busqueda-productos');
 
 // Categoría y texto de busqueda iniciales
-let categoriaSeleccionada = 'Todos';
+const categoriasDisponibles = new Set([...botonesFiltro].map((boton) => boton.dataset.categoria));
+const categoriaSolicitada = new URLSearchParams(window.location.search).get('categoria');
+let categoriaSeleccionada = categoriasDisponibles.has(categoriaSolicitada)
+    ? categoriaSolicitada
+    : 'Todos';
 let textoBusqueda = '';
 
 //Funcion para verificar si un producto coincide con la busqueda actual
@@ -36,6 +40,14 @@ function actualizarCartas() {
 //Funcion para seleccionar una categoria y actualizar las cartas de productos
 function seleccionarCategoria(categoria) {
     categoriaSeleccionada = categoria;
+    const url = new URL(window.location.href);
+    if (categoria === 'Todos') {
+        url.searchParams.delete('categoria');
+    } else {
+        url.searchParams.set('categoria', categoria);
+    }
+    window.history.replaceState({}, '', url);
+
     botonesFiltro.forEach((boton) => {
         boton.classList.toggle('active', boton.dataset.categoria === categoria);
     });
@@ -52,5 +64,5 @@ campoBusqueda?.addEventListener('input', (evento) => {
     actualizarCartas();
 });
 
-// Inicializacion de la pagina con todas las cartas de productos
-actualizarCartas();
+// Inicializacion de la pagina con la categoria indicada en la URL
+seleccionarCategoria(categoriaSeleccionada);
