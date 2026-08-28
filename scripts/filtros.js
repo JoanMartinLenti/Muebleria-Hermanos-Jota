@@ -1,11 +1,16 @@
+//Incorporacion de productos y categorias desde productos.js
 import { categorias, productos } from './productos.js';
 import { mostrarCartas } from './cartas.js';
 
+// Selección de elementos del DOM
 const botonesFiltro = document.querySelectorAll('.filter-chip');
 const campoBusqueda = document.getElementById('busqueda-productos');
+
+// Categoría y texto de busqueda iniciales
 let categoriaSeleccionada = 'Todos';
 let textoBusqueda = '';
 
+//Funcion para verificar si un producto coincide con la busqueda actual
 function coincideConBusqueda(producto) {
     const contenido = [
         producto.nombre,
@@ -16,6 +21,7 @@ function coincideConBusqueda(producto) {
     return contenido.includes(textoBusqueda);
 }
 
+//Funcion para actualizar las cartas de productos mostradas en la pagina
 function actualizarCartas() {
     const productosFiltrados = productos.filter((producto) => {
         const coincideConCategoria = categoriaSeleccionada === 'Todos'
@@ -27,6 +33,7 @@ function actualizarCartas() {
     mostrarCartas(productosFiltrados);
 }
 
+//Funcion para seleccionar una categoria y actualizar las cartas de productos
 function seleccionarCategoria(categoria) {
     categoriaSeleccionada = categoria;
     botonesFiltro.forEach((boton) => {
@@ -35,6 +42,7 @@ function seleccionarCategoria(categoria) {
     actualizarCartas();
 }
 
+//Asignacion de eventos a los botones de filtro y al campo de busqueda
 botonesFiltro.forEach((boton) => {
     boton.addEventListener('click', () => seleccionarCategoria(boton.dataset.categoria));
 });
@@ -44,4 +52,5 @@ campoBusqueda?.addEventListener('input', (evento) => {
     actualizarCartas();
 });
 
+// Inicializacion de la pagina con todas las cartas de productos
 actualizarCartas();

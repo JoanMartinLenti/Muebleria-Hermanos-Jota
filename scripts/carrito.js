@@ -1,10 +1,13 @@
+// Importación de productos desde productos.js
 import { productos } from './productos.js';
 
+// Claves y duración para el almacenamiento del carrito en localStorage
 const CLAVE_CARRITO = 'hermanos-jota-carrito';
 const CLAVE_EXPIRACION = 'hermanos-jota-carrito-expira';
 const DURACION_CARRITO = 20_000;
 let temporizadorVaciado;
 
+// Función para obtener el carrito desde localStorage, devolviendo un arreglo vacío si no existe o si hay un error
 function obtenerCarrito() {
     try {
         return JSON.parse(localStorage.getItem(CLAVE_CARRITO)) || [];
@@ -13,6 +16,7 @@ function obtenerCarrito() {
     }
 }
 
+// Función para actualizar los contadores de productos en el carrito en la interfaz
 function actualizarContadores() {
     const cantidadTotal = obtenerCarrito()
         .reduce((total, item) => total + item.cantidad, 0);
@@ -23,12 +27,14 @@ function actualizarContadores() {
     });
 }
 
+// Función para vaciar el carrito y eliminar la expiración del mismo
 function vaciarCarrito() {
     localStorage.removeItem(CLAVE_CARRITO);
     localStorage.removeItem(CLAVE_EXPIRACION);
     actualizarContadores();
 }
 
+// Función para programar el vaciado del carrito cuando expire el tiempo
 function programarVaciado() {
     const expiracion = Number(localStorage.getItem(CLAVE_EXPIRACION));
     const tiempoRestante = expiracion - Date.now();
@@ -43,6 +49,7 @@ function programarVaciado() {
     temporizadorVaciado = window.setTimeout(vaciarCarrito, tiempoRestante);
 }
 
+// Función para agregar un producto al carrito, actualizando la cantidad si ya existe
 function agregarAlCarrito(nombre, cantidad) {
     const producto = productos.find((item) => item.nombre === nombre);
     if (!producto) return;
@@ -61,6 +68,7 @@ function agregarAlCarrito(nombre, cantidad) {
     programarVaciado();
 }
 
+// Selección del botón de agregar al carrito y asignación del evento de clic
 const botonAgregar = document.getElementById('agregar-carrito');
 if (botonAgregar) {
     botonAgregar.addEventListener('click', () => {
@@ -76,7 +84,9 @@ if (botonAgregar) {
     });
 }
 
+// Inicialización de los contadores y programación del vaciado del carrito al cargar la página
 actualizarContadores();
 programarVaciado();
 
+// Exportación de funciones para su uso en otros módulos
 export { agregarAlCarrito, obtenerCarrito, vaciarCarrito };

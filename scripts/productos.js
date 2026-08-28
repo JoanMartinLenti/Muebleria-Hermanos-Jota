@@ -115,7 +115,7 @@ const categorias = {
     'Aparador Uspallata': 'Almacenamiento'
 };
 
-//inicialización del array de productos con instancias de cada clase específica
+//Inicialización del array de productos con instancias de cada clase específica
 
 const productos = [
 	new SillaTrabajoBelgrano(), new EscritorioCosta(), new SillasCordoba(),
@@ -124,4 +124,5 @@ const productos = [
 	new BibliotecaRecoleta(), new AparadorUspallata()
 ];
 
+//Exportación de los productos y categorías para su uso en otros módulos
 export { productos, categorias };

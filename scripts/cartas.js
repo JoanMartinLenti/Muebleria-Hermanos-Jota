@@ -1,7 +1,10 @@
+// Importación de categorías desde productos.js
 import { categorias } from './productos.js';
 
+// Selección del contenedor donde se mostrarán las cartas de productos
 const contenedorProductos = document.querySelector('.products-grid');
 
+// Función para crear una carta de producto a partir de un objeto producto
 function crearCartaProducto(producto) {
     const tarjeta = document.createElement('article');
     tarjeta.className = 'product-card';
@@ -20,10 +23,12 @@ function crearCartaProducto(producto) {
     return tarjeta;
 }
 
+// Función para mostrar un conjunto de cartas de productos en el contenedor
 function mostrarCartas(productosFiltrados) {
     contenedorProductos.replaceChildren(
         ...productosFiltrados.map((producto) => crearCartaProducto(producto))
     );
 }
 
+// Exportación de la función mostrarCartas para su uso en otros módulos
 export { mostrarCartas };

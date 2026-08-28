@@ -1,16 +1,19 @@
+// Importación de productos y categorías desde productos.js
 import { productos, categorias } from './productos.js';
 
+// Obtención del producto solicitado desde la URL
 const nombreSolicitado = new URLSearchParams(window.location.search).get('producto');
 const producto = productos.find((item) => item.nombre === nombreSolicitado) || productos[0];
 const especificaciones = producto.especificaciones;
 const imagenProducto = `imagenes/${producto.nombre}.png`;
 
+// Función para actualizar el texto de un elemento por su ID
 function actualizarTexto(id, texto) {
     const elemento = document.getElementById(id);
     if (elemento && texto) elemento.textContent = texto;
 }
 
-
+// Función para actualizar la imagen de un elemento por su ID
 function actualizarImagen(id, textoAlternativo) {
     const imagen = document.getElementById(id);
     if (!imagen) return;
@@ -18,6 +21,7 @@ function actualizarImagen(id, textoAlternativo) {
     imagen.alt = textoAlternativo;
 }
 
+// Función para actualizar la lista de especificaciones del producto
 function actualizarEspecificaciones() {
     const lista = document.querySelector('.detail-spec-list');
     if (!lista) return;
@@ -56,6 +60,7 @@ function actualizarEspecificaciones() {
     }));
 }
 
+// Función para actualizar todos los detalles del producto en la página
 function actualizarDetalle() {
     document.title = `${producto.nombre} | Hermanos Jota`;
     const enlaceCategoria = document.getElementById('categoria');
@@ -80,4 +85,5 @@ function actualizarDetalle() {
     });
 }
 
+// Inicialización de la página con los detalles del producto
 actualizarDetalle();
