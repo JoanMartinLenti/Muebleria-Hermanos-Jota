@@ -43,11 +43,14 @@ function filtrarProductos(categoria) {
     window.history.replaceState({}, '', url);
 
     botonesFiltro.forEach((boton) => {
-        boton.classList.toggle('active', boton.getAttribute('onclick') === `filtrarProductos('${categoria}')`);
+        boton.classList.toggle('active', boton.dataset.categoria === categoria);
     });
 }
 
-window.filtrarProductos = filtrarProductos;
+botonesFiltro.forEach((boton) => {
+    boton.addEventListener('click', () => filtrarProductos(boton.dataset.categoria));
+});
+
 const categoriaSolicitada = new URLSearchParams(window.location.search).get('categoria');
 const categoriaInicial = categoriasValidas.includes(categoriaSolicitada) ? categoriaSolicitada : 'Todos';
 filtrarProductos(categoriaInicial);
