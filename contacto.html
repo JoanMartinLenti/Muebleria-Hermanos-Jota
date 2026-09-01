@@ -58,24 +58,36 @@
                 <div class="contact-card">
                     <h2 style="font-size: 1.35rem; margin-bottom: 1.25rem;">Envíanos un Mensaje</h2>
                     
-                    <form action="#" method="post">
+                    <form action="#" method="post" id="formularioContacto" novalidate>
                         <div class="form-group">
-                            <label class="form-label" for="nombre">Nombre Completo *</label>
+                           <div class="row-tag">
+                                <label class="form-label" for="nombre">Nombre Completo *</label>
+                                <span id="error-nombre" class="notificacion-error"></span>
+                           </div> 
                             <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Ej. Clara Méndez" required>
                         </div>
 
                         <div class="form-group">
-                            <label class="form-label" for="email">Correo Electrónico *</label>
+                            <div class="row-tag">
+                                <label class="form-label" for="email">Correo Electrónico *</label>
+                                <span id="error-email" class="notificacion-error"></span>
+                           </div> 
                             <input type="email" id="email" name="email" class="form-input" placeholder="nombre@correo.com" required>
                         </div>
 
                         <div class="form-group">
-                            <label class="form-label" for="telefono">Teléfono / WhatsApp</label>
+                            <div class="row-tag">
+                                <label class="form-label" for="telefono">Teléfono / WhatsApp</label>
+                                <span id="error-telefono" class="notificacion-error"></span>
+                           </div> 
                             <input type="tel" id="telefono" name="telefono" class="form-input" placeholder="+54 11 0000-0000">
                         </div>
 
                         <div class="form-group">
-                            <label class="form-label" for="motivo">Tipo de Consulta *</label>
+                            <div class="row-tag">
+                                <label class="form-label" for="motivo">Tipo de Consulta *</label>
+                                <span id="error-motivo" class="notificacion-error"></span>
+                           </div> 
                             <select id="motivo" name="motivo" class="form-select" required>
                                 <option value="" disabled selected>Selecciona una opción</option>
                                 <option value="producto">Consulta sobre un modelo específico</option>
@@ -87,11 +99,14 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="form-label" for="mensaje">Tu Mensaje *</label>
+                            <div class="row-tag">
+                                <label class="form-label" for="mensaje">Tu Mensaje *</label>
+                                <span id="error-de-mensaje" class="notificacion-error"></span>
+                           </div> 
                             <textarea id="mensaje" name="mensaje" class="form-textarea" rows="5" placeholder="Cuéntanos en detalle sobre tu espacio, medidas o consultas..." required></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-primary btn-full" style="margin-top: 0.5rem;">Enviar Mensaje</button>
+                        <button type="submit" class="btn btn-primary btn-full" id="enviarFormulario" style="margin-top: 0.5rem;">Enviar Mensaje</button>
                     </form>
                 </div>
 
@@ -141,6 +156,7 @@
                 </div>
             </section>
         </div>
+        <script src="scriptcontacto.js"></script>
     </main>
 
     <!-- Pie de Página (Footer Flexbox) -->

@@ -794,6 +794,7 @@ p:last-child {
   color: var(--color-texto);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  width: 200px;
 }
 
 .form-input,
@@ -1102,4 +1103,16 @@ p:last-child {
   .footer-col {
     flex: 1 1 calc(25% - 2rem);
   }
+}
+
+.row-tag{
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  color: green;
+  font-size: 0.85rem;
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.05em;
+  justify-content: space-between;
 }
