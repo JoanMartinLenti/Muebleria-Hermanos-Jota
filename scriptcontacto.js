@@ -1,7 +1,12 @@
-// Regex corregidas (sin /g y con escapes correctos)
+//regex
+// Acepta solo letras (con tildes, ñ y espacios) de cualquier idioma
 const soloLetras = /^[\p{L}\s]+$/u;
+
+// Acepta correos de gmail, outlook o hotmail terminados en .com o .com.ar (ignora mayúsculas)
 const verificarEmail = /^[^\s@]+@(gmail|outlook|hotmail)(\.com|\.com\.ar)$/i;
-const verificarNumero = /^\+54\d{10}$/; // Espera ej: +541123456789
+
+// Acepta 10 dígitos obligatorios con el prefijo '+54' opcional (ej: +541123456789 o 1123456789)
+const verificarNumero = /^(\+54)?\d{10}$/;
 
 const botonEnviar = document.querySelector('#enviarFormulario');
 
