@@ -87,7 +87,7 @@ function comprobar() {
 
     // 3. Validación Teléfono
     const errorTelefono = document.querySelector("#error-telefono");
-    if (numero !== "" && !verificarNumero.test(numero)) {
+    if (numero == "" && !verificarNumero.test(numero)) {
         errorTelefono.textContent = "Formato esperado: +54 seguido de 10 dígitos";
         formularioValido = false;
     } else {
