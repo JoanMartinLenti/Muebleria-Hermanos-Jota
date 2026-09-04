@@ -2,8 +2,8 @@
 // Acepta solo letras (con tildes, ñ y espacios) de cualquier idioma
 const soloLetras = /^[\p{L}\s]+$/u;
 
-// Acepta correos de gmail, outlook o hotmail terminados en .com o .com.ar (ignora mayúsculas)
-const verificarEmail = /^[^\s@]+@(gmail|outlook|hotmail)(\.com|\.com\.ar)$/i;
+// Acepta correos de cualquier proveedor terminados en .com o .com.ar (ignora mayúsculas)
+const verificarEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 
 // Acepta 10 dígitos obligatorios con el prefijo '+54' opcional (ej: +541123456789 o 1123456789)
 const verificarNumero = /^(\+54)?\d{10}$/;
@@ -69,7 +69,7 @@ function comprobar() {
     if (!soloLetras.test(nombre)) {
         errorNombre.textContent = "Ingreso un dato incorrecto en su nombre";
         formularioValido = false;
-    } else if (nombre.length < 3) {
+    } else if (nombre.length < 2) {
         errorNombre.textContent = "Ingreso pocas letras para un nombre";
         formularioValido = false;
     } else {
