@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // 1. Identificamos los contenedores en el HTML
     const contenedorDestacados = document.getElementById("contenedor-destacados");
     const contenedorProductos = document.getElementById("contenedor-productos");
+    const botonesFiltro = document.querySelectorAll('.filter-chip');
 
     // 2. Función general para pintar las tarjetas en pantalla
     function renderizarProductos(lista, contenedor) {
@@ -24,13 +25,30 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p>${producto.descripcion}</p>
                     <span class="product-price">$ ${producto.precio.toLocaleString('es-AR')}</span>
                     <div class="product-card-footer">
-                        <a href="producto.html" class="btn btn-secondary btn-sm btn-full">Ver Detalles</a>
+                        <a href="producto.html?producto=${encodeURIComponent(producto.nombre)}" class="btn btn-secondary btn-sm btn-full">Ver Detalles</a>
                     </div>
                 </div>
             `;
 
             contenedor.appendChild(article);
         });
+    }
+
+    botonesFiltro.forEach((boton) => {
+        boton.addEventListener('click', () => seleccionarCategoria(boton.dataset.categoria));
+        boton.addEventListener('click', () => {
+            botonesFiltro.forEach((b) => b.classList.remove('active'));
+            boton.classList.add('active');
+        })
+    });
+
+    function seleccionarCategoria(categoria) {
+        if (categoria === 'Todos') {
+            renderizarProductos(productos, contenedorProductos);
+        }else{
+            const productosFiltrados = productos.filter(producto => producto.categoria === categoria);
+            renderizarProductos(productosFiltrados, contenedorProductos);
+        }
     }
 
     // 3. Lógica para el index.html (solo los destacados)
@@ -55,4 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
             renderizarProductos(productosFiltrados, contenedorProductos);
         });
     }
+
+    
 });
