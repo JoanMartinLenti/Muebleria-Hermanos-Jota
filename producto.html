@@ -37,6 +37,7 @@
                     <li><a href="productos.html" class="nav-link">Catálogo</a></li>
                     <li><a href="producto.html" class="nav-link active">Destacado</a></li>
                     <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                    <li><button type="button" class="cart-link" aria-label="Carrito de compras">🛒 <span class="cart-count">0</span></button></li>
                 </ul>
             </nav>
         </div>
@@ -46,11 +47,12 @@
     <main class="section-padding">
         <div class="container">
             <!-- Migas de Pan (Breadcrumbs) -->
+        
             <nav class="breadcrumb-nav" aria-label="Migas de pan">
                 <a href="index.html">Inicio</a> &gt; 
                 <a href="productos.html">Catálogo</a> &gt; 
-                <a href="productos.html">Living</a> &gt; 
-                <span>Sillón Copacabana</span>
+                <a href="productos.html" id="categoria">Living</a> &gt; 
+                <span id="producto-breadcrumb">Producto</span>
             </nav>
 
             <!-- Disposición del Detalle del Producto (Flexbox) -->
@@ -58,17 +60,17 @@
                 <!-- Columna Galería de Imágenes -->
                 <div class="product-detail-gallery">
                     <div class="main-product-image">
-                        <img src="imagenes/Sillón Copacabana.png" alt="Vista principal Sillón Copacabana">
+                        <img id="producto-imagen" src="imagenes/Sillón Copacabana.png" alt="Vista principal Sillón Copacabana">
                     </div>
                     <div class="thumbnail-row">
                         <div class="thumbnail-item active">
-                            <img src="imagenes/Sillón Copacabana.png" alt="Miniatura 1">
+                            <img src="imagenes/Sillón Copacabana.png" alt="Miniatura 1 Sillón Copacabana">
                         </div>
                         <div class="thumbnail-item">
-                            <img src="imagenes/Butaca Mendoza.png" alt="Miniatura 2">
+                            <img src="imagenes/Sillón Copacabana.png" alt="Miniatura 2 Sillón Copacabana">
                         </div>
                         <div class="thumbnail-item">
-                            <img src="imagenes/Sofá Patagonia.png" alt="Miniatura 3">
+                            <img src="imagenes/Sillón Copacabana.png" alt="Miniatura 3 Sillón Copacabana">
                         </div>
                     </div>
                 </div>
@@ -77,66 +79,46 @@
                 <div class="product-detail-info">
                     <div>
                         <span class="badge badge-salvia">Mueble Sustentable Certificado</span>
-                        <h1 style="margin-top: 0.75rem;">Sillón Copacabana</h1>
-                        <span class="product-category">Colección Living 2026</span>
+                        <h1 id="producto-nombre" style="margin-top: 0.75rem;">Sillón Copacabana</h1>
+                        <span id="producto-categoria" class="product-category">Colección Living 2026</span>
                     </div>
 
-                    <div class="detail-price">$ 650.000</div>
+                    <div id="producto-precio" class="detail-price">$ 650.000</div>
 
-                    <p>
+                    <p id="producto-descripcion">
                         Sillón lounge en cuero cognac con base giratoria en acero Burnt Sienna. Inspirado en la estética brasilera moderna de los 60, combina comodidad excepcional con un diseño icónico que trasciende tendencias y épocas
                     </p>
 
-                <!-- Selector de Acabado 
-                    <div class="form-group">
-                        <label class="form-label" for="acabado">Madera / Acabado:</label>
-                        <select id="acabado" class="form-select">
-                            <option value="guatambu-natural">Guatambú Natural (Acabado Mate)</option>
-                            <option value="petiribi">Petiribí Envejecido</option>
-                            <option value="nogal-oscuro">Nogal Oscuro al Aceite</option>
-                        </select>
-                    </div>
-                -->
-                    <!-- Selector de Tapizado -->
-                    <!--<div class="form-group">
-                        <label class="form-label" for="tapizado">Color de Tapizado:</label>
-                        <select id="tapizado" class="form-select">
-                            <option value="alabastro">Lino Alabastro Cálido</option>
-                            <option value="salvia">Lino Verde Salvia</option>
-                            <option value="rosa">Lino Rosa Polvoriento</option>
-                        </select>
-                    </div>
-                -->
                     <!-- Selector de Cantidad y Botón de Acción -->
                     <div style="display: flex; gap: 1rem; align-items: center; margin-top: 0.5rem;">
                         <div class="form-group" style="width: 100px; margin-bottom: 0;">
                             <label class="form-label" for="cantidad">Cant:</label>
                             <input type="number" id="cantidad" class="form-input text-center" value="1" min="1" max="10">
                         </div>
-                        <button type="button" class="btn btn-primary" style="flex: 1; height: 50px;">Añadir al Carrito</button>
+                        <button id="agregar-carrito" type="button" class="btn btn-primary" style="flex: 1; height: 50px;">Añadir al Carrito</button>
                     </div>
 
                     <!-- Especificaciones Técnicas -->
                     <div class="detail-spec-list">
                         <div class="detail-spec-item">
                             <span class="detail-spec-label">Dimensiones:</span>
-                            <span class="detail-spec-value">90 cm (ancho) x 85 cm (prof.) x 90 cm (alto)</span>
+                            <span id="spec-medidas" class="detail-spec-value"></span>
                         </div>
                         <div class="detail-spec-item">
                             <span class="detail-spec-label">Materiales:</span>
-                            <span class="detail-spec-value">Cuero curtido vegetal, acero pintado</span>
+                            <span id="spec-materiales" class="detail-spec-value"></span>
                         </div>
                         <div class="detail-spec-item">
                             <span class="detail-spec-label">Acabado:</span>
-                            <span class="detail-spec-value">Cuero anilina premium</span>
+                            <span id="spec-acabado" class="detail-spec-value"></span>
                         </div>
                         <div class="detail-spec-item">
                             <span class="detail-spec-label">Rotación:</span>
-                            <span class="detail-spec-value">360 ° silenciosa y suave| </span>
+                            <span id="spec-rotacion" class="detail-spec-value"></span>
                         </div>
                         <div class="detail-spec-item">
                             <span class="detail-spec-label">Garantía:</span>
-                            <span class="detail-spec-value">10 años de garantía estructural</span>
+                            <span id="spec-garantia" class="detail-spec-value"></span>
                         </div>
                     </div>
                 </div>
@@ -243,5 +225,7 @@
             <p>Diseño y Ebanistería Responsable.</p>
         </div>
     </footer>
+    <script type="module" src="scripts/detalle-producto.js"></script>
+    <script type="module" src="scripts/carrito.js"></script>
 </body>
 </html>

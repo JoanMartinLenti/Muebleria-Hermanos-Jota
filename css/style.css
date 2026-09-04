@@ -391,6 +391,25 @@ p:last-child {
   background-color: var(--color-siena-tostado);
 }
 
+.cart-link {
+  font-size: 1.1rem;
+  color: var(--color-texto);
+  white-space: nowrap;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.cart-link:hover {
+  color: var(--color-siena-tostado);
+}
+
+.cart-count {
+  font-size: 0.75rem;
+  font-weight: var(--fw-bold);
+}
+
 /* --------------------------------------------------------------------------
    9. SECCIÓN HERO (Hero Flexbox)
    -------------------------------------------------------------------------- */

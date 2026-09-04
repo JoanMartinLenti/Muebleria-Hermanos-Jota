@@ -37,7 +37,7 @@
                     <li><a href="productos.html" class="nav-link active">Catálogo</a></li>
                     <li><a href="producto.html" class="nav-link">Destacado</a></li>
                     <li><a href="contacto.html" class="nav-link">Contacto</a></li>
-                    <li><a href="#" class="nav-link">Carrito <span id="contador-carrito">(0)</span></a></li>
+                    <li><button type="button" class="cart-link" aria-label="Carrito de compras">🛒 <span class="cart-count">0</span></button></li>
                 </ul>
             </nav>
         </div>
@@ -60,13 +60,17 @@
 
             <!-- Filtros de Categorías (Flexbox) -->
             <nav class="filter-wrapper" aria-label="Filtro de productos">
+                <div class="form-group">
+                    <label class="form-label" for="busqueda-productos">Buscar productos</label>
+                    <input type="search" id="busqueda-productos" class="form-input" placeholder="Busca por nombre, categoría o descripción" autocomplete="off">
+                </div>
                 <div class="filter-categories">
-                    <button type="button" class="filter-chip active">Todos</button>
-                    <button type="button" class="filter-chip">Living & Sillones</button>
-                    <button type="button" class="filter-chip">Comedor & Mesas</button>
-                    <button type="button" class="filter-chip">Dormitorio</button>
-                    <button type="button" class="filter-chip">Estudio & Trabajo</button>
-                    <button type="button" class="filter-chip">Almacenamiento</button>
+                    <button type="button" class="filter-chip active" data-categoria="Todos">Todos</button>
+                    <button type="button" class="filter-chip" data-categoria="Living">Living & Sillones</button>
+                    <button type="button" class="filter-chip" data-categoria="Comedor">Comedor & Mesas</button>
+                    <button type="button" class="filter-chip" data-categoria="Dormitorio">Dormitorio</button>
+                    <button type="button" class="filter-chip" data-categoria="Estudio">Estudio & Trabajo</button>
+                    <button type="button" class="filter-chip" data-categoria="Almacenamiento">Almacenamiento</button>
                 </div>
             </nav>
 
@@ -121,6 +125,7 @@
         </div>
     </footer>
     <script src="productos.js"></script>
-<script src="main.js"></script>
+    <script src="main.js"></script>
+    <script type="module" src="scripts/carrito.js"></script>
 </body>
 </html>
