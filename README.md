@@ -3,7 +3,7 @@
 
 ## 👥 Integrantes
 * Maia De Blasis
-* Joan Lenti
+* Joan Martin Lenti
 * Camila Paredez
 * Ivan
 * Javier Barreto 
