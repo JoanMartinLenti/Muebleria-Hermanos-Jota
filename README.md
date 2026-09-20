@@ -5,21 +5,17 @@
 * Maia De Blasis
 * Joan Martin Lenti
 * Camila Paredez
-* Ivan
+* Ivan Campos Wainer
 * Javier Barreto 
 
+## 👥 Desarrollo por Roles
+**Integrante 1:** DevOps, configuración inicial del repositorio, control de versiones y maquetación de componentes estructurales globales (`Navbar` y `Footer`).
+**Integrante 2:** Backend Developer (API y Rutas). Encargado de construir la base del servidor y los endpoints de productos de la mueblería.
+ 
 ## 📝 Descripción de Funcionalidad
-Sitio web e-commerce desarrollado para la marca de mobiliario de autor **Hermanos Jota**. El sistema cuenta con las siguientes funcionalidades principales:
-- **Página de Inicio (`index.html`):** Presentación institucional de la marca, valores de diseño y una sección dinámica de piezas destacadas.
-- **Catálogo Completo (`productos.html`):** Visualización general de todo el mobiliario disponible en el sistema.
-- **Buscador Dinámico (Bonus):** Barra de búsqueda interactiva en tiempo real que filtra los productos del catálogo por nombre o descripción de forma instantánea.
-- **Detalle de Producto (`producto.html`):** Vista individual para consultar las características específicas de cada mueble.
-- **Sección de Contacto (`contacto.html`):** Formulario interactivo para consultas y datos completos de ubicación del showroom principal.
-- **Renderizado Dinámico:** Carga automática de las tarjetas de productos a partir de una base de datos local basada en un array de objetos en JavaScript mediante la manipulación del DOM.
+
 
 ## 🛠️ Tecnologías Utilizadas
-
-- **HTML** 
-- **CSS** 
-- **JavaScript**
-- **VS** 
+- **Frontend:** React.js, HTML5, CSS3 / Estilos modulares.
+- **Control de Versiones:** Git y GitHub (trabajo por ramas y Pull Requests).
+- **Entorno:** Node.js, npm. 
