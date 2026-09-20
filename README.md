@@ -10,7 +10,7 @@
 
 ## 👥 Desarrollo por Roles
 **Integrante 1:** DevOps, configuración inicial del repositorio, control de versiones y maquetación de componentes estructurales globales (`Navbar` y `Footer`).
-**Integrante 2:** Backend Developer (API y Rutas). Encargado de construir la base del servidor y los endpoints de productos de la mueblería.
+***Integrante 2:** Backend Developer (API y Rutas). Encargado de construir la base del servidor y los endpoints de productos de la mueblería.
  
 ## 📝 Descripción de Funcionalidad
 
