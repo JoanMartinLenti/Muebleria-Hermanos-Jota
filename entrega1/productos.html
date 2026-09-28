@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Muebles | Hermanos Jota</title>
+    <meta name="description" content="Explora el catálogo completo de piezas de autor de Mueblería Hermanos Jota. Living, comedor, dormitorio y espacios de trabajo.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="imagenes/logo.svg" type="image/svg+xml">
+    
+    <!-- Tipografías de Google Fonts: Inter y Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Hoja de Estilos Principal -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Barra superior de anuncios -->
+    <div class="top-bar">
+        <span>Envíos sustentables a todo el país • Diseños de autor en maderas nobles</span>
+    </div>
+
+    <!-- Encabezado Principal (Header Flexbox) -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="brand-logo" aria-label="Inicio Hermanos Jota">
+                <img src="imagenes/logo.svg" alt="Logotipo Hermanos Jota" width="42" height="42">
+                <span class="brand-name">Hermanos Jota</span>
+            </a>
+
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="productos.html" class="nav-link active">Catálogo</a></li>
+                    <li><a href="producto.html" class="nav-link">Destacado</a></li>
+                    <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="section-padding">
+        <div class="container">
+            <!-- Encabezado de Página -->
+            <header class="section-header text-center">
+                <span class="subtitle">Colección Artesanal | Redescubrir el arte de vivir</span>
+                <h1>Catálogo de Mobiliario</h1>
+                <p>Cada pieza cuenta la historia de manos expertas y materiales nobles</p>
+            </header>
+
+            <!-- Filtros de Categorías (Flexbox) -->
+            <nav class="filter-wrapper" aria-label="Filtro de productos">
+                <div class="form-group">
+                    <label class="form-label" for="busqueda-productos">Buscar productos</label>
+                    <input type="search" id="buscador-productos" class="form-input" placeholder="Busca por nombre, categoría o descripción" autocomplete="off">
+                </div>
+                <div class="filter-categories">
+                    <button type="button" class="filter-chip active" data-categoria="Todos">Todos</button>
+                    <button type="button" class="filter-chip" data-categoria="Living">Living & Sillones</button>
+                    <button type="button" class="filter-chip" data-categoria="Comedor">Comedor & Mesas</button>
+                    <button type="button" class="filter-chip" data-categoria="Dormitorio">Dormitorio</button>
+                    <button type="button" class="filter-chip" data-categoria="Estudio & Trabajo">Estudio & Trabajo</button>
+                    <button type="button" class="filter-chip" data-categoria="Almacenamiento">Almacenamiento</button>
+                </div>
+            </nav>
+
+            <!-- Grilla Completa de Productos (Flexbox) -->
+            <section class="products-grid" id="contenedor-productos">
+            </section>
+        </div>
+    </main>
+
+    <!-- Pie de Página (Footer Flexbox) -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3 class="footer-col-title">Hermanos Jota</h3>
+                <p>Mueblería de autor comprometida con el diseño responsable, la calidad noble y la tradición artesanal.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-col-title">Navegación</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Catálogo Completo</a></li>
+                    <li><a href="producto.html">Producto Destacado</a></li>
+                    <li><a href="contacto.html">Showroom & Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-col-title">Categorías</h4>
+                <ul class="footer-links">
+                    <li><a href="productos.html">Living & Sillones</a></li>
+                    <li><a href="productos.html">Comedor & Mesas</a></li>
+                    <li><a href="productos.html">Dormitorio</a></li>
+                    <li><a href="productos.html">Espacios de Trabajo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-col-title">Atención</h4>
+                <ul class="footer-links">
+                    <li><a href="contacto.html">Av. San Juan 2847, CABA</a></li>
+                    <li><a href="contacto.html">info@hermanosjota.com</a></li>
+                    <li><a href="contacto.html">+54 11 4567-8900</a></li>
+                    <li><a href="contacto.html">Lun a Vie: 10:00 a 19:00 | Sab: 10:00 a 14:00</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Mueblería Hermanos Jota. Todos los derechos reservados.</p>
+            <p>Diseño y Ebanistería Responsable.</p>
+        </div>
+    </footer>
+    <script src="scripts/productos.js"></script>
+    <script src="scripts/catalogo.js"></script>
+    <script type="module" src="scripts/carrito.js"></script>
+</body>
+</html>

@@ -1,5 +1,4 @@
 // Importación de productos desde productos.js
-import { productos } from './productos.js';
 
 // Claves y duración para el almacenamiento del carrito en localStorage
 const CLAVE_CARRITO = 'hermanos-jota-carrito';
@@ -89,4 +88,3 @@ actualizarContadores();
 programarVaciado();
 
 // Exportación de funciones para su uso en otros módulos
-export { agregarAlCarrito, obtenerCarrito, vaciarCarrito };

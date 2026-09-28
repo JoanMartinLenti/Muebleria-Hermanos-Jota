@@ -56,73 +56,7 @@
             </nav>
 
             <!-- Disposición del Detalle del Producto (Flexbox) -->
-            <section class="product-detail-layout">
-                <!-- Columna Galería de Imágenes -->
-                <div class="product-detail-gallery">
-                    <div class="main-product-image">
-                        <img id="producto-imagen" src="imagenes/Sillón Copacabana.png" alt="Vista principal Sillón Copacabana">
-                    </div>
-                    <div class="thumbnail-row">
-                        <div class="thumbnail-item active">
-                            <img src="imagenes/Sillón Copacabana.png" alt="Miniatura 1 Sillón Copacabana">
-                        </div>
-                        <div class="thumbnail-item">
-                            <img src="imagenes/Sillón Copacabana.png" alt="Miniatura 2 Sillón Copacabana">
-                        </div>
-                        <div class="thumbnail-item">
-                            <img src="imagenes/Sillón Copacabana.png" alt="Miniatura 3 Sillón Copacabana">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Columna Información y Compra -->
-                <div class="product-detail-info">
-                    <div>
-                        <span class="badge badge-salvia">Mueble Sustentable Certificado</span>
-                        <h1 id="producto-nombre" style="margin-top: 0.75rem;">Sillón Copacabana</h1>
-                        <span id="producto-categoria" class="product-category">Colección Living 2026</span>
-                    </div>
-
-                    <div id="producto-precio" class="detail-price">$ 650.000</div>
-
-                    <p id="producto-descripcion">
-                        Sillón lounge en cuero cognac con base giratoria en acero Burnt Sienna. Inspirado en la estética brasilera moderna de los 60, combina comodidad excepcional con un diseño icónico que trasciende tendencias y épocas
-                    </p>
-
-                    <!-- Selector de Cantidad y Botón de Acción -->
-                    <div style="display: flex; gap: 1rem; align-items: center; margin-top: 0.5rem;">
-                        <div class="form-group" style="width: 100px; margin-bottom: 0;">
-                            <label class="form-label" for="cantidad">Cant:</label>
-                            <input type="number" id="cantidad" class="form-input text-center" value="1" min="1" max="10">
-                        </div>
-                        <button id="agregar-carrito" type="button" class="btn btn-primary" style="flex: 1; height: 50px;">Añadir al Carrito</button>
-                    </div>
-
-                    <!-- Especificaciones Técnicas -->
-                    <div class="detail-spec-list">
-                        <div class="detail-spec-item">
-                            <span class="detail-spec-label">Dimensiones:</span>
-                            <span id="spec-medidas" class="detail-spec-value"></span>
-                        </div>
-                        <div class="detail-spec-item">
-                            <span class="detail-spec-label">Materiales:</span>
-                            <span id="spec-materiales" class="detail-spec-value"></span>
-                        </div>
-                        <div class="detail-spec-item">
-                            <span class="detail-spec-label">Acabado:</span>
-                            <span id="spec-acabado" class="detail-spec-value"></span>
-                        </div>
-                        <div class="detail-spec-item">
-                            <span class="detail-spec-label">Rotación:</span>
-                            <span id="spec-rotacion" class="detail-spec-value"></span>
-                        </div>
-                        <div class="detail-spec-item">
-                            <span class="detail-spec-label">Garantía:</span>
-                            <span id="spec-garantia" class="detail-spec-value"></span>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <section class="product-detail-layout"></section>
 
             <!-- Sección de Productos Relacionados (Flexbox) -->
             <section class="products-section" style="padding-top: 2rem;">
@@ -225,6 +159,7 @@
             <p>Diseño y Ebanistería Responsable.</p>
         </div>
     </footer>
+    <script src="scripts/productos.js"></script>
     <script type="module" src="scripts/detalle-producto.js"></script>
     <script type="module" src="scripts/carrito.js"></script>
 </body>
