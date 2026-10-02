@@ -19,4 +19,35 @@ router.get('/:id', (req, res) => {
     }
 });
 
+router.delete('/:id', (req, res, next) => {
+    try {
+        const idProducto = req.params.id;
+
+        console.log(`Producto con ID ${idProducto} marcado para eliminación`);
+
+        res.status(200).json({
+            success: true,
+            mensaje: `Producto con ID ${idProducto} eliminado correctamente`
+        });
+    } catch (error) {
+        next(error);
+    }
+});
+
+router.post('/', (req, res, next) => {
+    try {
+        const nuevoProducto = req.body; 
+
+        console.log('Producto recibido para guardar:', nuevoProducto);
+
+        res.status(201).json({
+            success: true,
+            mensaje: 'Producto creado correctamente',
+            data: nuevoProducto
+        });
+    } catch (error) {
+        next(error);
+    }
+});
+
 module.exports = router;
