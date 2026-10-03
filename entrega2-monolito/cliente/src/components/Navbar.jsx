@@ -26,8 +26,7 @@ const BrandLogo = ({ size = 42 }) => (
     />
   </svg>
 );
-
-const Navbar = ({ cartCount = 0, logoSrc }) => {
+const Navbar = ({ cartCount = 0, logoSrc, onCartClick }) => {
   return (
     <>
       <style>{`
@@ -94,6 +93,9 @@ const Navbar = ({ cartCount = 0, logoSrc }) => {
           border-radius: 999px;
           background-color: #f0e7dc;
           transition: all 0.2s ease;
+          border: 0;
+          font: inherit;
+          cursor: pointer;
         }
         .hj-cart-button:hover {
           background-color: #e5d8cb;
@@ -149,7 +151,13 @@ const Navbar = ({ cartCount = 0, logoSrc }) => {
           </nav>
 
           {/* Carrito con Contador Dinámico */}
-          <a href="#carrito" className="hj-cart-button" aria-label={`Carrito de compras con ${cartCount} productos`}>
+        
+          <button
+            type="button"
+            onClick={onCartClick}
+            className="hj-cart-button"
+            aria-label={`Abrir carrito de compras con ${cartCount} productos`}
+          >
             <svg
               width="20"
               height="20"
@@ -167,7 +175,8 @@ const Navbar = ({ cartCount = 0, logoSrc }) => {
             </svg>
             <span style={{ fontSize: '0.9rem', fontWeight: 600 }}>Carrito</span>
             <span className="hj-cart-badge">{cartCount}</span>
-          </a>
+          </button>
+
         </div>
       </header>
     </>
