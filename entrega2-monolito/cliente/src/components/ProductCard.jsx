@@ -6,7 +6,7 @@ const formatoPrecio = new Intl.NumberFormat('es-AR', {
   maximumFractionDigits: 0,
 });
 
-function ProductCard({ producto }) {
+function ProductCard({ producto, onAgregar, onVerDetalle }){
   const [imagenDisponible, setImagenDisponible] = useState(Boolean(producto.imagen));
   const imagen = producto.imagen
     ? /^https?:\/\//i.test(producto.imagen)
@@ -40,16 +40,30 @@ function ProductCard({ producto }) {
         <span className="product-category">{producto.categoria || 'Colección'}</span>
         <h3>{producto.nombre || 'Pieza de autor'}</h3>
         <p className="product-description">
-          {producto.descripcion || 'Diseñada con materiales nobles y atención a cada detalle.'}
+           {producto.descripcion && producto.descripcion.length > 0
+             ? producto.descripcion
+             : 'Sin descripción disponible'}
         </p>
+                <button
+          type="button"
+          className="product-detail-link"
+          onClick={() => onVerDetalle(producto)}
+        >
+          Ver detalle
+        </button>
         <div className="product-card-bottom">
           <span className="product-price">
             {Number.isFinite(Number(producto.precio))
               ? formatoPrecio.format(Number(producto.precio))
               : 'Consultar precio'}
           </span>
-          <span className="product-card-mark" aria-hidden="true">↗</span>
-        </div>
+          <button
+            type="button"
+            className="product-add-button"
+            onClick={() => onAgregar(producto)}
+          >
+            Agregar al carrito
+          </button>        </div>
       </div>
     </article>
   );

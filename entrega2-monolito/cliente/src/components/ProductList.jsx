@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductCard from './ProductCard';
 
-function ProductList({ productos, estado, error, onReintentar }) {
+function ProductList({ productos, estado, error, onReintentar, onAgregar, onVerDetalle }) {
   if (estado === 'cargando') {
     return (
       <div className="product-grid" aria-label="Cargando catálogo" aria-busy="true">
@@ -42,7 +42,12 @@ function ProductList({ productos, estado, error, onReintentar }) {
   return (
     <div className="product-grid">
       {productos.map((producto) => (
-        <ProductCard key={producto.id} producto={producto} />
+        <ProductCard
+          key={producto.id}
+          producto={producto}
+          onAgregar={onAgregar}
+          onVerDetalle={onVerDetalle}
+        />
       ))}
     </div>
   );

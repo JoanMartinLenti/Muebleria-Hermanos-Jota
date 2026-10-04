@@ -136,8 +136,8 @@ const Footer = () => {
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#catalogo">Catálogo Completo</a></li>
                 <li><a href="#destacado">Producto Destacado</a></li>
-                <li><a href="#showroom-contacto">Showroom & Contacto</a></li>
-              </ul>
+                <li><a href="#contacto">Showroom & Contacto</a></li>              
+                </ul>
             </div>
 
             {/* Columna 3: Categorías */}
