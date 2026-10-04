@@ -5,24 +5,28 @@ const productosRouter = require('./routes/productosRouter');
 const app = express();
 const PORT = 3000;
 
-// Configuración básica
+//Configuración básica
 app.use(cors());
 app.use(express.json());
 
+//Middleware global de logging
 app.use((req, res, next) => {
     console.log(`[${new Date().toISOString()}] Método: ${req.method} - URL: ${req.url}`);
     next();
 });
-// Conectar las rutas de la API
+
+//Conectar las rutas de la API
 app.use('/api/productos', productosRouter);
 
-// Levantar el servidor
-app.listen(PORT, () => {
-    console.log(`¡Servidor corriendo a la perfección en http://localhost:${PORT}!`);
+//Manejador de 404 
+app.use((req, res, next) => {
+    res.status(404).json({
+        success: false,
+        error: 'Ruta no encontrada (404)'
+    });
 });
 
-
-
+//Manejador de errores centralizado 
 app.use((err, req, res, next) => {
     console.error('Error capturado:', err.stack);
 
@@ -37,9 +41,7 @@ app.use((err, req, res, next) => {
     });
 });
 
-app.use((req, res, next) => {
-    res.status(404).json({
-        success: false,
-        error: 'Ruta no encontrada (404)'
-    });
+//Levantar el servidor 
+app.listen(PORT, () => {
+    console.log(`¡Servidor corriendo a la perfección en http://localhost:${PORT}!`);
 });
